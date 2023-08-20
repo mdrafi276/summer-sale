@@ -9,5 +9,14 @@ function clickHander(data){
      
      const price = data.childNodes[7].childNodes[3].innerText.split(' ')[0];
      total = parseInt(total) + parseInt(price);
-     console.log(total)
+     const itemTextContainer = document.getElementById('price-item-two');
+     itemTextContainer.innerText = total;
+    const discount = ((total / 100) * 20).toFixed(2);
+        const discountItem = total - discount;
+     const textValueCountainer = document.getElementById('price-item-three');
+     textValueCountainer.innerText = discountItem;
+     
+
+     
+     console.log()
 }
