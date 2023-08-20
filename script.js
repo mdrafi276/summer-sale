@@ -9,14 +9,17 @@ function clickHander(data){
      
      const price = data.childNodes[7].childNodes[3].innerText.split(' ')[0];
      total = parseInt(total) + parseInt(price);
-     const itemTextContainer = document.getElementById('price-item-two');
+     const itemTextContainer = document.getElementById('price-item-one');
      itemTextContainer.innerText = total;
     const discount = ((total / 100) * 20).toFixed(2);
-        const discountItem = total - discount;
-     const textValueCountainer = document.getElementById('price-item-three');
-     textValueCountainer.innerText = discountItem;
-     
+        
+     const textValueCountainer = document.getElementById('price-item-two');
+     const discountItem = total - discount;
+     textValueCountainer.innerText = discount;
+     const textValueCountainerItem = document.getElementById('price-item-three');
+     textValueCountainerItem.innerText = discountItem;
+}
+function resetButten(){
+    location.reload()
 
-     
-     console.log()
 }
