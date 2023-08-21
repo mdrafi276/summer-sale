@@ -30,11 +30,27 @@ function clickHander(data){
         buyNow.removeAttribute('disabled')
     }else{
         buyNow.style.backgroundColor = 'gray';
-        buyNow.setAttribute('disabled',true)
+        buyNow.setAttribute('disabled',true);
     } 
+    
 
 }
- 
+
+ document.getElementById('apply-btn').addEventListener("click",function(){
+    const inputItem = document.getElementById('input-item').value;
+    const priceItemTwo = document.getElementById('price-item-two');
+    const priceItemThree = document.getElementById('price-item-three');
+    
+
+    if(inputItem === 'SELL200'){
+
+        discountItemText = ((total /100 )* 20);
+        discountItemFinal = total - discountItemText;
+        priceItemTwo.innerText = parseInt(discountItemText).toFixed(2);
+        priceItemThree.innerText = discountItemFinal.toFixed(2);
+
+    }
+ })
      
  
 
