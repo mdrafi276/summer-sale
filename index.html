@@ -18,7 +18,7 @@
   <header>
     <div class="hero  bg-[#F9F6E2] md:min-h-screen ">
       <div class="hero-content flex-col md:w-full  md:gap-40 lg:flex-row-reverse">
-        <img src="/images/Summer 1.png" class="md:max-w-sm rounded-lg md:shadow-2xl" />
+        <img src="/images/Summer 1.png" class="md:max-w-sm rounded-lg " />
         <div>
           <h1 class="text-sm  text-center flex text-black  flex-col  "> ---SALE FEVER---</h1>
           <p class="py-6 text-black text-3xl font-extrabold "> Purchase TK 200 or <br> above & get <span
@@ -41,7 +41,7 @@
         <div>
           <h1 class="text-2xl mt-20 relative font-extrabold ">Kitchenware</h1>
           <div class="grid md:grid-cols-3 lg:grid-cols-3 -mt-14 gap-28">
-            <div onclick="clickHander(this)" class="card md:w-[180px]    border-white border-8 md:h-[300px] mt-20 bg-base-100 shadow-xl">
+            <div onclick="clickHander(this),discountButton()" class="card md:w-[180px]    border-white border-8 md:h-[300px] mt-20 bg-base-100 shadow-xl">
               <figure class="px-10 pt-10  bg-[#1111110D]">
                 <img src="/images/prod1.png" alt="Shoes" class="rounded-xl  w-[100px] h-[130px] pb-4 " />
               </figure>
@@ -100,7 +100,7 @@
           <h1 class="text-2xl font-extrabold ">Sportswear</h1>
           <div class="grid md:grid-cols-3  lg:grid-cols-3 gap-28">
             <div
-            onclick="clickHander(this)" class="card md:w-[180px] pt-0 border-white border-8 md:h-[300px] md:mt-20 lg:mt-2 bg-base-100 shadow-xl">
+            onclick="clickHander(this)" class="card md:w-[180px] pt-0 border-white border-8 md:h-[300px]   lg:mt-2 bg-base-100 shadow-xl">
               <figure class="px-10 pt-10 bg-[#1111110D]">
                 <img src="/images/prod4.png" alt="Shoes" class="rounded-xl  w-[100px] h-[130px] pb-4 " />
               </figure>
@@ -219,8 +219,8 @@
               <h2 class="card-title">Have coupon?</h2>
               <div class="flex flex-col md:flex-row">
                 <input placeholder="Coupon code" class="  w-full md:w-[185px]  border-gray-400 border-2  " type="text"
-                  name="" id="">
-                <button class="text-white px-6 mt-5 md:mt-0 py-2 rounded-xl bg-[#E527B2]">Apply</button>
+                  name="" id="input-item">
+                <button id="apply-btn" disabled class="text-white px-6 mt-5 md:mt-0 py-2 rounded-xl bg-[#E527B2]">Apply</button>
               </div>
             </div>
           </div>
@@ -228,14 +228,14 @@
         <!-- second amount card  -->
         <div class="mt-4">
           <div class="card   rounded-none bg-base-100 shadow-xl">
-            <div id="selected-items" class=" selected-items p-6 font-bold">
-             
+            <div  class=" selected-items p-6 font-bold">
+             <ol id="selected-items" class="list-decimal"></ol>
             </div>
             <hr>
             <div class="p-6">
-              <h1  class="font-bold">Total <span id="price-item-one">00</span> TK</h1>
-              <h1 class="font-bold">Discount : <span id="price-item-two">00</span>Tk</h1>
-              <h1 class="font-bold">Total: <span id="price-item-three" >00</span> Tk</h1>
+              <h1  class="font-bold">Total price: <span class="text-gray-500" id="price-item-one">00</span> TK</h1>
+              <h1 class="font-bold">Discount : <span class="text-gray-500" id="price-item-two">00</span>Tk</h1>
+              <h1 class="font-bold">Total: <span class="text-gray-500" id="price-item-three" >00</span> Tk</h1>
               <div class="mt-4">
                 <hr>
               </div>
@@ -246,12 +246,12 @@
 <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
 <dialog id="my_modal_1" class="modal">
   <form method="dialog" class="modal-box">
-   <div class="text-center w-[100px] mx-auto"> <img class="text-center mt-10" src="./images/congo.png" alt=""></div>
+   <div class="text-center w-[100px] mx-auto"> <img class="text-center md:mt-2 lg:mt-10 mt-10" src="./images/congo.png" alt=""></div>
     <h3 class="font-bold text-lg text-center">Congratulations</h3>
-    <p class="py-4 text-center">Your Purchase the product</p>
+    <p class="py-4  text-center">Your Purchase the product</p>
     <div class="modal-action   ">
       <!-- if there is a button in form, it will close the modal -->
-      <button  onclick="resetButten()" class="btn-reset mr-[170px] mb-10 text-white rounded-xl px-6 py-2 bg-[#E527B2] ">Go Home</button>
+      <button  onclick="resetButten()" class="btn-reset  md:mr-[170px] mb-10 text-white rounded-xl px-6 py-2 bg-[#E527B2] ">Go Home</button>
     </div>
   </form>
 </dialog>
@@ -262,7 +262,7 @@
       </div>
     </section>
   </main>
-  <script src="script.js"></script>
+  <script src="text-coco.js"></script>
 </body>
 
 </html>
